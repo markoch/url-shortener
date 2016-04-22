@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  div.container
+  div.content
+  div.well
+    p
+      span Short URL:
+    p
+      span
+      a(href="#{shortURL}") #{shortURL}
+
+  div.mark
+    span URLs accessed: #{performedLookup}
+  div.mark
+    span URLs stored: #{storedKeys}

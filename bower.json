@@ -1,0 +1,21 @@
+{
+  "name": "url-shortener",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Marco Koch <marco.koch.hh@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

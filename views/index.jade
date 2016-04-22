@@ -1,0 +1,16 @@
+extends layout
+block content
+  h1.= title
+  p Welcome to #{title}
+
+
+  div.container
+  div.content
+  div.well
+    form.form-horizontal(name="shortURL", method="post", action="/transform")
+      div.form-group
+        div.inputs
+          input(type="text", name="url", class="form-control", placeholder="Paste a link here")
+        p
+        div.actions
+          input(type="submit", class="btn btn-success", value="Shorten URL")
