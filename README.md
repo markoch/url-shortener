@@ -24,6 +24,10 @@ Then open the following URL in your browser: [http://localhost:3000/](http://loc
 ### Docker
 If you want to run it from a Docker container then a [Dockerfile](Dockerfile) configuration file is included.
 
+## Next steps
+- Provide additional REST API
+- Use [redis](http://redis.io/) as storage service
+
 ## License
 Copyright (c) 2016 Marco Koch
 
