@@ -1,15 +1,12 @@
-var express = require('express');
-var short   = require('../transform/URLShortener.js');
-var router  = express.Router();
-
-var urlStorage = {};
-var lookups = 0;
+var repository = require('../transform/URLShortener.js');
+var express    = require('express');
+var router     = express.Router();
 
 /* resolve a short URL to a long URL and redirect the request */
 router.get('/:url', function(req, res, next) {
   var requestHostInfo = req.headers.host; //not used yet
 
-  var longURL = short.getLongURL(req.params.url);
+  var longURL = repository.getLongURL(req.params.url);
 
   if (longURL){
     res.writeHead(302, {'Location': longURL});
@@ -33,7 +30,7 @@ router.post('/', function(req, res, next) {
     var localhost = req.server.host;
     var localport = req.server.port;
 
-    var pageInfo = short.getShortURL(localhost, localport, submittedUrl);
+    var pageInfo = repository.getShortURL(localhost, localport, submittedUrl);
     res.render('result', pageInfo);
   }
 });
