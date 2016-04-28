@@ -1,19 +1,17 @@
 var express = require('express');
+var short   = require('../transform/URLShortener.js');
 var router  = express.Router();
 
 var urlStorage = {};
 var lookups = 0;
 
-/* GET url to expand and forward the request it. */
+/* resolve a short URL to a long URL and redirect the request */
 router.get('/:url', function(req, res, next) {
-  var requestHostInfo = req.headers.host;
-  var shortURL = req.params.url;
+  var requestHostInfo = req.headers.host; //not used yet
 
-  if (urlStorage.hasOwnProperty(shortURL)){
-    var longURL = urlStorage[shortURL];
+  var longURL = short.getLongURL(req.params.url);
 
-    lookups++;
-
+  if (longURL){
     res.writeHead(302, {'Location': longURL});
     res.end();
   } else {
@@ -23,60 +21,21 @@ router.get('/:url', function(req, res, next) {
   }
 });
 
-/* POST url to shorten it. */
+/* Shorten a long URL and return detailed information */
 router.post('/', function(req, res, next) {
   var pageInfo = {};
   var submittedUrl = req.body.url;
+
   if (!submittedUrl) {
     //no url given so go back to main page
     res.render('index', { title: 'URL Shortener' });
   } else {
-    var longURL = verifyHTTPPrefix(submittedUrl);
-    var key = nextKey(longURL, generateRandomKey);
+    var localhost = req.server.host;
+    var localport = req.server.port;
 
-    urlStorage[key]=longURL;
-
-    var server = req.server.host;
-    var port = req.server.port;
-    var url = "http://" + server + ':' + port + "/" + key;
-
-    pageInfo = {
-      title: 'URL Shortener',
-      shortURL: url,
-      storedKeys: storedKeys(),
-      performedLookup: lookups
-    };
-
+    var pageInfo = short.getShortURL(localhost, localport, submittedUrl);
     res.render('result', pageInfo);
   }
 });
-
-function nextKey(longURL, generateKey) {
-  var foundKey;
-  Object.keys(urlStorage).forEach(function(key) {
-    if (urlStorage[key]== longURL){
-      foundKey =  key;
-    }
-  });
-
-  return foundKey ?  foundKey : generateKey();
-}
-
-function generateRandomKey() {
-  //http://stackoverflow.com/questions/1349404/generate-a-string-of-5-random-characters-in-javascript
-  var maxLength = 5;
-  return (Math.random().toString(36)+'00000000000000000').slice(2, maxLength+2);
-}
-
-function verifyHTTPPrefix(longURL) {
-  if (!longURL.toUpperCase().startsWith("HTTP")) {
-    longURL =  "http://" + longURL;
-  }
-  return longURL;
-}
-
-function storedKeys() {
-  return Object.keys(urlStorage).length;
-}
 
 module.exports = router;
