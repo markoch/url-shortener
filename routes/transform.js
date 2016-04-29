@@ -20,7 +20,6 @@ router.get('/:url', function(req, res, next) {
 
 /* Shorten a long URL and return detailed information */
 router.post('/', function(req, res, next) {
-  var pageInfo = {};
   var submittedUrl = req.body.url;
 
   if (!submittedUrl) {
