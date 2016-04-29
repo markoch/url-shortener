@@ -1,4 +1,4 @@
-# URL Shortener [![Build Status](https://travis-ci.org/markoch/url-shortener.svg?branch=master)](https://travis-ci.org/SamVerschueren/obsify)
+# URL Shortener [![Build Status](https://travis-ci.org/markoch/url-shortener.svg?branch=master)](https://travis-ci.org/markoch/url-shortener)
 
 This project implements an URL shortener service, like [Bitly](https://bitly.com/)
 or [goo.gl](https://goo.gl/).
