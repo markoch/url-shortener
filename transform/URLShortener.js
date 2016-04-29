@@ -4,7 +4,7 @@ var lookups = 0;
 function nextKey(longURL, generateKey) {
   var foundKey;
   Object.keys(urlStorage).forEach(function(key) {
-    if (urlStorage[key]== longURL){
+    if (urlStorage[key] === longURL){
       foundKey =  key;
     }
   });
@@ -19,8 +19,8 @@ function generateRandomKey() {
 }
 
 function verifyHTTPPrefix(longURL) {
-  if (!longURL.toUpperCase().startsWith("HTTP")) {
-    longURL =  "http://" + longURL;
+  if (!longURL.toUpperCase().startsWith('HTTP')) {
+    longURL =  'http://' + longURL;
   }
   return longURL;
 }
@@ -45,7 +45,7 @@ var Repository = {
 
     urlStorage[key]=longURL;
 
-    var url = "http://" + localhost + ':' + localport + "/" + key;
+    var url = 'http://' + localhost + ':' + localport + '/' + key;
 
     return {
       title: 'URL Shortener',

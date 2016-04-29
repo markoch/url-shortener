@@ -4,7 +4,8 @@ var router     = express.Router();
 
 /* resolve a short URL to a long URL and redirect the request */
 router.get('/:url', function(req, res, next) {
-  var requestHostInfo = req.headers.host; //not used yet
+  // get the sender infor
+  // var requestHostInfo = req.headers.host;
 
   var longURL = repository.getLongURL(req.params.url);
 
@@ -19,7 +20,7 @@ router.get('/:url', function(req, res, next) {
 });
 
 /* Shorten a long URL and return detailed information */
-router.post('/', function(req, res, next) {
+router.post('/', function(req, res) {
   var submittedUrl = req.body.url;
 
   if (!submittedUrl) {

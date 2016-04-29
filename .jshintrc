@@ -1,0 +1,25 @@
+{
+  // Documentation http://www.jshint.com/docs/
+  // Details https://github.com/victorporof/Sublime-JSHint#using-your-own-jshintrc-options
+  // Example https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+  "bitwise": true,
+  "browser": true,
+  "curly": true,
+  "devel": false,
+  "esnext": true,
+  "eqeqeq": true,
+  "jquery": true,
+  "latedef": true,
+  "globalstrict": true,
+  "noarg": true,
+  "node": true,
+  "phantom": true,
+  "quotmark": true,
+  "undef": true,
+  "unused": true,
+  "strict": false,
+  "globals": {
+    "$": false,
+    "angular": false
+  }
+}
