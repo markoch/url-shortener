@@ -1,4 +1,9 @@
-# URL Shortener [![Build Status](https://travis-ci.org/markoch/url-shortener.svg?branch=master)](https://travis-ci.org/markoch/url-shortener)
+# URL Shortener
+
+[![Build Status](https://travis-ci.org/markoch/url-shortener.svg?branch=master)](https://travis-ci.org/markoch/url-shortener)
+[![Dependency Status](https://img.shields.io/david/markoch/url-shortener.svg?style=flat)](https://david-dm.org/markoch/url-shortener)
+[![devDependency Status](https://img.shields.io/david/dev/markoch/url-shortener.svg?style=flat)](https://david-dm.org/markoch/url-shortener#info=devDependencies)
+
 
 This project implements an URL shortener service, like [Bitly](https://bitly.com/)
 or [goo.gl](https://goo.gl/).
