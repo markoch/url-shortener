@@ -15,8 +15,6 @@ Fork the repository and install the dependencies
     bower install
     npm install
 
-Then move the *bower_components* directory to the public directory.
-
 ## Usage
 Start the application by executing from the main directory
 
