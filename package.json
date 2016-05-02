@@ -23,7 +23,7 @@
     "debug":       "2.2.x",
     "express":     "4.13.x",
     "morgan":      "1.7.x",
-    "pug":         "2.0.0-x"
+    "pug":         "2.0.0-alpha6"
   },
 
   "devDependencies": {
