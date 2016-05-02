@@ -1,5 +1,5 @@
 # URL Shortener
-[![Build Status](https://travis-ci.org/markoch/url-shortener.svg?branch=master)](https://travis-ci.org/markoch/url-shortener) 
+[![Build Status](https://travis-ci.org/markoch/url-shortener.svg?branch=master)](https://travis-ci.org/markoch/url-shortener)
 [![Dependency Status](https://img.shields.io/david/markoch/url-shortener.svg?style=flat)](https://david-dm.org/markoch/url-shortener)
 [![devDependency Status](https://img.shields.io/david/dev/markoch/url-shortener.svg?style=flat)](https://david-dm.org/markoch/url-shortener#info=devDependencies)
 
@@ -29,10 +29,6 @@ Then open the following URL in your browser: [http://localhost:3000/](http://loc
 ### Docker
 If you want to run it from a Docker container then a [Dockerfile](Dockerfile)
 configuration file is included.
-
-## Next steps
-- Provide additional REST API
-- Use [redis](http://redis.io/) as storage service
 
 ## License
 Copyright (c) 2016 Marco Koch
