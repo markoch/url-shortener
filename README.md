@@ -31,6 +31,4 @@ If you want to run it from a Docker container then a [Dockerfile](Dockerfile)
 configuration file is included.
 
 ## License
-Copyright (c) 2016 Marco Koch
-
 MIT License, see [LICENSE.txt](LICENSE.txt) for more details.
