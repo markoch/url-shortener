@@ -1,32 +1,27 @@
 {
-  "name":        "url-shortener",
+  "name": "url-shortener",
   "description": "URL Shortener using nodejs",
-  "license":     "MIT",
-  "version":     "0.0.2",
-  "private":     true,
-
+  "license": "MIT",
+  "version": "0.0.2",
+  "private": true,
   "author": {
     "name": "Marco Koch"
   },
-
   "engines": {
     "node": ">=4"
   },
-
   "scripts": {
     "start": "node ./bin/www",
-    "test":  "./node_modules/jshint/bin/jshint routes transform"
+    "test": "./node_modules/jshint/bin/jshint routes transform"
   },
-
   "dependencies": {
     "body-parser": "1.15.x",
-    "debug":       "2.2.x",
-    "express":     "4.13.x",
-    "morgan":      "1.7.x",
-    "pug":         "2.0.0-alpha6"
+    "debug": "2.2.x",
+    "express": "4.14.0",
+    "morgan": "1.7.x",
+    "pug": "2.0.0-alpha6"
   },
-
   "devDependencies": {
-    "jshint":      "2.9.x"
+    "jshint": "2.9.x"
   }
 }
