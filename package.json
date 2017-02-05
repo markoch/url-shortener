@@ -22,6 +22,6 @@
     "pug": "2.0.0-alpha6"
   },
   "devDependencies": {
-    "jshint": "2.9.x"
+    "jshint": "2.9.4"
   }
 }
