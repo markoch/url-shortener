@@ -1,16 +1,16 @@
 var redis = require('redis');
 
 //connect to Redis
-var redis_host = "127.0.0.1";
-var redis_port = "6379";
+var redis_host = '127.0.0.1';
+var redis_port = '6379';
 var redisClient = redis.createClient(redis_port, redis_host);
 
 redisClient.on('ready',function() {
- console.log("Redis service is ready");
+ console.log('Redis service is ready');
 });
 
 redisClient.on('error',function() {
- console.log("Error in Redis service");
+ console.log('Error in Redis service');
 });
 
 redisClient.on('connect', function() {
@@ -20,7 +20,7 @@ redisClient.on('connect', function() {
 var Store = {
 
   setURL : function (shortURL, longURL) {
-      console.log("Set URL: " + shortURL + " - " + longURL);
+      console.log('Set URL: ' + shortURL + ' - ' + longURL);
       redisClient.set(shortURL, longURL);
       redisClient.set(longURL, shortURL);
   },

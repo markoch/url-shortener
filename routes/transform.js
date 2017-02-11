@@ -10,7 +10,7 @@ router.get('/:url', function(req, res, next) {
   // var requestHostInfo = req.headers.host;
 
   if (isRedis) {
-      function myCb(longURL) {
+      var myCb = function (longURL) {
           if (longURL){
             res.writeHead(302, {'Location': longURL});
             res.end();
@@ -38,24 +38,20 @@ router.get('/:url', function(req, res, next) {
 /* Shorten a long URL and return detailed information */
 router.post('/', function(req, res) {
   var submittedUrl = req.body.url;
+  var localhost = req.server.host;
+  var localport = req.server.port;
 
   if (!submittedUrl) {
     //no url given so go back to main page
     res.render('index', { title: 'URL Shortener' });
   } else {
     if (isRedis) {
-        var localhost = req.server.host;
-        var localport = req.server.port;
-
-        function callback (pageInfo) {
+        var callback = function(pageInfo) {
             res.render('result', pageInfo);
-        }
+        };
 
         repository.getShortURL(localhost, localport, submittedUrl, callback);
     } else {
-        var localhost = req.server.host;
-        var localport = req.server.port;
-
         var pageInfo = repository.getShortURL(localhost, localport, submittedUrl);
         res.render('result', pageInfo);
     }
