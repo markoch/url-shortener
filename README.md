@@ -5,13 +5,13 @@
 
 
 This project implements an URL shortener service, like [Bitly](https://bitlyf.com/)
-or [goo.gl](https://goo.gl/).
+or [goo.gl](https://goo.gl/). This is just some technical playground for testing Node.JS, Docker and Redis. It must be strongly refactored!
 
 ## Requirements
 The following software must be installed:
 - Bower
 - Node.js
-- (optionally Docker)
+- (optionally Docker and Redis)
 
 ## Installation
 Fork the repository and install the dependencies
@@ -29,6 +29,13 @@ Then open the following URL in your browser: [http://localhost:3000/](http://loc
 ### Docker
 If you want to run it from a Docker container then a [Dockerfile](Dockerfile)
 configuration file is included.
+
+Please review Docker.md for more information.
+
+### Redis Service
+You must configure your Redis host and port in transform/URLStore.js. You can also start your own Redis service in a Docker container using redis/Dockerfile.
+
+Then enable Redis support in routes/transform.js.
 
 ## License
 MIT License, see [LICENSE.txt](LICENSE.txt) for more details.

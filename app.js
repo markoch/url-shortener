@@ -4,9 +4,11 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var os = require("os");
 
+//setup routes
 var routes = require('./routes/index');
 var transform = require('./routes/transform');
 
+//initialize the app
 var app = express();
 var localHost = os.hostname();
 

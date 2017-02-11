@@ -1,4 +1,5 @@
-FROM node:argon
+FROM node:boron
+RUN  apt-get update && apt-get install -y redis-server
 
 # Create app directory
 RUN mkdir -p /usr/src/app
