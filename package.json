@@ -15,7 +15,7 @@
     "test": "./node_modules/jshint/bin/jshint routes transform"
   },
   "dependencies": {
-    "body-parser": "1.16.0",
+    "body-parser": "1.16.1",
     "debug": "2.6.1",
     "express": "4.14.1",
     "morgan": "1.8.0",
