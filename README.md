@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/markoch/url-shortener.svg?branch=master)](https://travis-ci.org/markoch/url-shortener)
 [![Dependency Status](https://img.shields.io/david/markoch/url-shortener.svg?style=flat)](https://david-dm.org/markoch/url-shortener)
 [![devDependency Status](https://img.shields.io/david/dev/markoch/url-shortener.svg?style=flat)](https://david-dm.org/markoch/url-shortener#info=devDependencies)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/51afc975ad454f01900cad45df6d1f68)](https://www.codacy.com/app/markoch/url-shortener?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=markoch/url-shortener&amp;utm_campaign=Badge_Grade)
 
 This project implements an URL shortener service, like [Bitly](https://bitlyf.com/)
 or [goo.gl](https://goo.gl/). This is just some technical playground for testing Node.JS, Docker and Redis. It must be strongly refactored!
