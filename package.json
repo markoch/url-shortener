@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "test": "./node_modules/jshint/bin/jshint routes transform"
+    "test": "./node_modules/jshint/bin/jshint app.js routes transform"
   },
   "dependencies": {
     "body-parser": "1.16.1",
