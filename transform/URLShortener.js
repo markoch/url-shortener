@@ -36,7 +36,7 @@ var Repository = {
     if (urlStorage.hasOwnProperty(shortURL)){
       return urlStorage[shortURL];
     }
-    return undefined;
+    return '';
   },
 
   getShortURL : function (localhost, localport, submittedUrl) {

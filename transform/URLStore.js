@@ -1,9 +1,9 @@
 var redis = require('redis');
 
 //connect to Redis
-var redis_host = '127.0.0.1';
-var redis_port = '6379';
-var redisClient = redis.createClient(redis_port, redis_host);
+var redisHost = '127.0.0.1';
+var redisPort = '6379';
+var redisClient = redis.createClient(redisPort, redisHost);
 
 redisClient.on('ready',function() {
  console.log('Redis service is ready');

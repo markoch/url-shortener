@@ -6,16 +6,16 @@ var isRedis    = false;
 
 /* resolve a short URL to a long URL and redirect the request */
 router.get('/:url', function(req, res, next) {
-  // get the sender infor
+  // get the sender information
   // var requestHostInfo = req.headers.host;
 
   if (isRedis) {
       var myCb = function (longURL) {
-          if (longURL){
+          if (longURL &&  longURL.length > 0) {
             res.writeHead(302, {'Location': longURL});
             res.end();
           } else {
-            var err = new Error('Not Found');
+            var err = new Error('URL not found');
             err.status = 404;
             next(err);
           }
@@ -24,11 +24,11 @@ router.get('/:url', function(req, res, next) {
 
   } else {
       var longURL = repository.getLongURL(req.params.url);
-      if (longURL){
+      if (longURL &&  longURL.length > 0) {
         res.writeHead(302, {'Location': longURL});
         res.end();
       } else {
-        var err = new Error('Not Found');
+        var err = new Error('URL not found');
         err.status = 404;
         next(err);
       }
