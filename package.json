@@ -15,7 +15,7 @@
     "test": "./node_modules/jshint/bin/jshint app.js routes transform"
   },
   "dependencies": {
-    "body-parser": "1.18.1",
+    "body-parser": "1.18.3",
     "cluster": "^0.7.7",
     "debug": "3.1.0",
     "express": "5.0.0-alpha.6",
