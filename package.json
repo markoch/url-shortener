@@ -19,7 +19,7 @@
     "cluster": "^0.7.7",
     "debug": "3.2.1",
     "express": "5.0.0-alpha.6",
-    "morgan": "1.9.0",
+    "morgan": "1.9.1",
     "pug": "2.0.3",
     "redis": "^2.6.5",
     "redis-js": "^0.1.2"
