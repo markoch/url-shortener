@@ -21,7 +21,7 @@
     "express": "5.0.0-alpha.6",
     "morgan": "1.9.1",
     "pug": "2.0.4",
-    "redis": "^2.6.5",
+    "redis": "^3.0.0",
     "redis-js": "^0.1.2"
   },
   "devDependencies": {
